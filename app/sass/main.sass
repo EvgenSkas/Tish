@@ -566,6 +566,7 @@ ul.multiple-items>button
 	button
 		margin: 45px 0
 	h5
+		text-align: center;
 
 .service-item:hover
 	background-color: rgba(238, 245, 255, 1)
@@ -615,23 +616,24 @@ ul.multiple-items>button
 		text-align: center
 
 .news_item
+	display: flex
+	flex-direction: column
 	max-width: 360px
-	min-width: 240px
 	height: auto
+	margin: auto
 	background-color: #fff
 	margin-bottom: 30px
 	img
 		margin-bottom: 30px
 	h4, p 
 		margin: 15px 10px 20px 20px
+		text-overflow: clip
 	h4
 		height: 72px
 		color: $blue
 	h4:hover
 		color: #e51515
 		text-decoration: underline
-	p 
-		height: 72px
 	a 
 		display: block
 		font-family: $default-font-bold
@@ -689,9 +691,6 @@ ul.multiple-items>button
 		border-bottom: 1px dotted #e51515
 	.btn-map
 		display: none
-		position: absolute
-		top: -5px
-		left: 480px
 		margin: 45px auto 0
 		width: 170px
 		height: 45px
@@ -754,7 +753,7 @@ ul.multiple-items>button
 
 .popup-form
 	text-align: center
-	
+	max-width: 520px
 	p
 		font-size: emy(14)
 	input, textarea
@@ -764,6 +763,7 @@ ul.multiple-items>button
 		margin-bottom: 15px
 		border-radius: 3px
 		color: #000
+		font-size: emy(14)
 	input:focus, textarea:focus
 		box-shadow: inset 0 0 1px 1px $blue
 	textarea
@@ -771,8 +771,11 @@ ul.multiple-items>button
 	input:required:invalid,
 	textarea:required:invalid
 		box-shadow:inset 0 0 1px 1px red
-
-
+.mfp-close
+	font-family: $default-font
+	font-size: emy(24)
+.mfp-close:hover
+	color: #e92525
 
 // new_page CATALOG1
 
@@ -820,5 +823,24 @@ ul.multiple-items>button
 			p 
 				margin: 15px 0
 				font-size: emy(14)
+.scrollup
+	width: 40px
+	height: 40px
+	border-radius: 50%
+	opacity: 0.9
+	position: fixed
+	bottom: 50px
+	right: 30px
+	display: none
+	background-color: #000
+	text-decoration: none
+
+	.fa 
+		display: block
+		color: #fff
+		text-align: center
+		padding-top: 3px
+		font-size: emy(28)
+
 
 @import "media" // Всегда в конце
