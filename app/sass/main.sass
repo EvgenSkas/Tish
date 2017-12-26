@@ -541,11 +541,15 @@ ul.multiple-items>button
 		justify-content: space-around
 		flex-wrap: wrap
 .service-item
-	display: inline-block
-	text-align: center
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: flex-end
+	margin: auto
+	max-width: 360px
+	height: 340px
 	border: 1px solid #EEF5FF
 	border-radius: 5px
-	padding: 170px 100px 40px
 	margin-bottom: 25px
 	background: url('../img/Service1.png') no-repeat center 55px
 	background-color: rgba(238, 245, 255, 0)
@@ -560,10 +564,8 @@ ul.multiple-items>button
 	&-bg5	
 		background: url('../img/Service6.png') no-repeat center 55px
 	button
-		vertical-align: bottom
-		margin-top: 50px
+		margin: 45px 0
 	h5
-		height: 36px;
 
 .service-item:hover
 	background-color: rgba(238, 245, 255, 1)
