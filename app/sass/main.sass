@@ -1,0 +1,822 @@
+
+@function emy($pxsize:$pxbase) 
+    @return ($pxsize/$pxbase)+em
+
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*::-webkit-input-placeholder
+	color: #000
+	opacity: 1
+
+*:-moz-placeholder
+	color: #000
+	opacity: 1
+
+*::-moz-placeholder
+	color: #000
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #000
+	opacity: 1
+
+
+input:required,
+textarea:required
+	box-shadow: none
+
+
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.5
+	font-family: $default-font
+	overflow-x: hidden
+address
+	text-transform: none
+	font-style: normal
+strong, b, h1, h2, h3, h4, h5, h6, .btn
+	font-family: $default-font-bold
+	margin: 0
+	padding: 0
+p 
+	margin: 0
+	padding: 0
+body
+	margin: 0
+	padding: 0
+
+h1, h2
+	text-transform: uppercase
+	margin: 0
+h1
+	font-size: emy(34)
+h2
+	font-size: emy(24)
+h3
+	font-size: emy(18)	
+h4
+	font-size: emy(16)
+	line-height: 18px
+h5
+	font-size: emy(14)
+	line-height: 18px
+	text-transform: uppercase
+ul, li
+	margin: 0
+	padding: 0
+	list-style: none
+img
+	max-width: 100%
+	height: auto
+
+.blue
+	color: $blue
+.red
+	color: #e51515
+.bold
+	font-family: $default-font-bold
+.btn
+	background-color: #ffd200
+	font-size: emy(14)
+	padding: 10px 25px
+	border-radius: 3px
+	border: none
+.btn:hover
+	cursor: pointer
+.hidden-lg
+	display: none
+.hidden-form
+	display: none
+
+// header start
+
+.main-head
+	padding: 10px 0 20px 0
+	box-shadow: 0 -10px 5px -5px #ccc 
+
+
+.contacts
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
+	font-size: emy(14)
+	line-height: 18px
+	padding-bottom: 20px
+
+
+.adress
+	display: flex
+
+	span
+		border-bottom: 1px dotted #000
+
+	a.location
+		font-size: 0
+		display: block
+		width: 14px
+		height: 14px
+		border: 5px solid $blue
+		border-radius: 50%
+		border-top-left-radius: 0
+		transform: rotate(225deg)
+		margin-left: 5px
+		margin-right: 10px 
+
+	
+
+.contact
+	display: flex
+	a
+		color: #000
+	a:hover
+		color: #ccc
+	.phone
+		color: $blue
+		cursor: pointer
+		margin-left: 25px
+		.fa
+			width: 16px
+			height: 16px
+			font-size: emy(10)
+			line-height: 17px
+			color: #fff
+			text-align: center
+			vertical-align: bottom
+			background: $blue
+			border-radius: 50%
+			margin-top: 0 5px 0 10px
+		a
+			font-family: $default-font-bold
+			color: $blue
+			text-decoration: underline dotted $blue
+	.phone:hover
+		color: #ccc
+		.fa
+			background: #ccc
+		a
+			color: #ccc
+.top-line
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	height: 100%
+	position: relative
+	
+
+
+.logo_block
+	display: flex
+	flex-basis: 27%
+
+	strong
+		margin: 18px 0 0 15px
+		text-transform: uppercase
+		color: $blue
+		width: 150px
+		font-size: emy(21)
+		line-height: 21px
+
+
+.logo
+	width: 70px
+	height: 80px
+	background: url('../img/logo.png') no-repeat center
+
+.mobile-mnu
+	padding: 10px
+	cursor: pointer
+	background-color: $blue
+	position: relative
+	color: #ccc
+	b 
+		display: block
+		text-align: center
+		
+.toggle-mnu 
+  display: block
+  width: 28px
+  height: 28px
+  float: left
+
+  span:after, span:before 
+    content: ""
+    position: absolute
+    left: 0
+    top: 9px
+
+  span:after
+    top: 18px
+
+  span 
+    position: relative
+    display: block
+
+  span, span:after, span:before
+    width: 100%
+    height: 4px
+    background-color: #ccc
+    transition: all 0.3s
+    backface-visibility: hidden
+    border-radius: 2px
+
+
+  &.on span 
+    background-color: transparent
+
+  &.on span:before 
+    transform: rotate(45deg) translate(-1px, 0px)
+
+  &.on span:after 
+    transform: rotate(-45deg) translate(6px, -7px)
+
+.sf-menu
+	display: flex
+	flex-basis: 73%
+	justify-content: space-between
+	flex-wrap: wrap
+	
+
+	>li 
+		height: 100px
+		text-transform: uppercase
+		font-family: $default-font-bold
+		font-size: emy(14)
+		padding: 30px 0 30px
+
+		a
+			color: #000
+			display: block
+
+		.fa
+			width: 95%
+			text-align: center
+			vertical-align: top
+
+	>li:first-child
+		margin-left: 0;
+
+	>li:hover>a
+		color: #e51515
+
+	>li:hover .fa
+		display: block
+		width: 95%
+		text-align: center
+		vertical-align: top
+		color: #e51515
+		transform: rotate(180deg)
+		transition: transform 0.5s ease
+
+	>li:hover
+
+ul.menu-items
+	opacity: 0
+	position: absolute
+	top: -1000000px
+	transition: opacity 0.5s
+	
+li.catalog:hover ul.menu-items,
+li.service:hover ul.menu-items,
+li.aplication:hover ul.menu-items
+	display: flex
+	justify-content: flex-start
+	flex-wrap: wrap
+	flex-basis: 100%
+	position: absolute
+	top: 80px
+	left: 0
+	padding: 35px 0 40px 50px
+	background-color: #fff
+	background-clip: padding-box
+	border-top: 40px solid transparent
+	opacity: 1
+	z-index: 100
+	
+	
+	li
+		flex-basis: 330px
+		list-style: disc outside
+		padding-right: 100px
+		padding-bottom: 10px
+
+		a
+			text-transform: none
+			font-size: emy(14)
+	li:hover,
+	li:hover a
+		color: #e51515
+
+.top-panel
+	position: relative
+	background: url('../img/head-bg.jpg') no-repeat center
+	background-size: cover
+
+.panel-content
+	position: relative
+	line-height: 1.2
+	padding: 110px 0 135px
+	text-align: center	
+	p
+		font-size: emy(18)
+		padding-top: 35px
+		text-decoration: underline
+
+
+.advantage
+	position: absolute
+	top: 350px
+
+.advantage ul li
+	position: relative
+	display: inline-block
+	background: url("../img/advantage-arrow.png") no-repeat center
+	width: 402px
+	height: 145px
+	margin-left: -35px
+	text-align: center
+	h2
+		display: block
+		padding: 55px 20px 30px 92px
+		color: $blue
+		background: url('../img/advantage-check.svg') no-repeat 55px 45px
+
+.advantage ul li.arrow:before,
+.advantage ul li.arrow:after
+	content: ""
+	display: table
+	position: absolute
+	background: transparent
+	box-shadow: -0px 10px 5px -5px #f1f1f1
+	
+.advantage ul li.arrow:before
+	top: 12px
+	left: 271px
+	width: 87px
+	height: 87px
+	transform: rotate(-113deg)
+
+.advantage ul li.arrow:after
+	bottom: 12px
+	left: 271px
+	width: 87px
+	height: 87px
+	transform: rotate(293deg)
+
+.advantage ul li:first-child
+	z-index: 2
+	margin-left: 0
+	h2
+		padding-left: 20px
+.advantage ul li:nth-child(2)
+	z-index: 1
+	h2
+		padding-left: 35px;
+.advantage ul li:last-child
+	z-index: 0
+	margin-left: -65px
+	h2
+		background-position: 83px 45px
+
+// header end
+
+// main start
+// catalog start
+.catalog_main
+	background: url('../img/catalog-bg.png') no-repeat center
+	background-size: cover
+	padding-bottom: 45px
+	h2
+		text-align: center
+		padding-top: 120px
+		margin-bottom: 35px
+		color: #fff
+
+// slider
+.slick-list
+	padding-top: 70px
+.slick-slide
+	text-align: center
+.slide-item
+	margin: 0 auto
+	display: flex
+	align-items: center
+	flex-direction: column
+	position: relative
+	width: 250px
+	background-color: #fff
+	border-radius: 3px
+	img
+		border-radius: 50%
+		margin-top: 85px
+	span
+		position: absolute
+		width: 180px
+		height: 180px
+		text-align: center
+		padding-top: 43px
+		top: -70px
+		left: 30px
+		font-size: emy(34)
+		color: #fff
+		font-family: $default-font-bold
+		background: url('../img/catalog-shape.png') no-repeat center -17px
+	h3
+		height: 40px
+		margin: 10px 0 0 0
+		line-height: 24px
+	button
+		margin: 30px 0 35px 0
+.slick-dots
+
+	padding: 0 20px
+
+.slick-dots li 
+	margin: 0
+	width: 48%
+	text-align: left
+	border-radius: 20px
+	height: 6px
+	vertical-align: bottom
+
+
+.slick-dots li:hover
+	background-color: rgba(255, 255, 255, 0.2)
+	
+
+.slick-dots li button:before
+	display: none
+.slick-dots li.slick-active
+	background-color: rgba(255, 255, 255, 0.2)
+
+.slick-dots li.slick-active  button:before
+	display: none
+
+ul.multiple-items>button
+	width: 30px
+	height: 30px
+	border-radius: 50%
+	top: 270px
+
+.slick-prev::before,
+.slick-next::before
+    content: ''
+    display: block
+    background: url('../img/slide-arrow-left.png') no-repeat 12px 10px
+    width: 30px
+    height: 30px
+    border-radius: 50%
+    opacity: 1
+    background-color: $blue
+
+.slick-prev
+	left: 0
+	z-index: 10
+
+.slick-prev:hover::before
+	background:#FFD200 url('../img/slide-arrow-left-black.png') no-repeat 12px 10px
+
+.slick-next
+    right: -5px
+
+.slick-next::before
+	background: url('../img/slide-arrow-right.png') no-repeat 12px 10px
+	background-color: $blue
+
+.slick-next:hover::before
+	background:#FFD200 url('../img/slide-arrow-right-black.png') no-repeat 12px 10px
+// slider end	
+
+// offer
+.offer
+	background-color: #EEF5FF
+
+	h2
+		text-align: center
+		padding: 60px 0 50px
+.offer-item
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+	background-color: #fff 
+	padding: 20px 20px 25px 15px
+	margin-bottom: 68px
+	border-radius: 5px
+	button
+		padding: 7px
+		margin-bottom: 25px
+		text-transform: uppercase
+		color: #fff 
+		background-color: #e51515
+		border-radius: 3px
+		border: none
+		font-family: $default-font-bold
+	p
+		padding: 25px 0 25px
+		font-size: emy(14)
+		line-height: 24px
+	a
+		font-family: $default-font-bold
+		color: #000
+	a:hover
+		color: #e51515
+
+// service
+
+.service
+	padding: 65px 0 60px
+	h2
+		text-align: center
+		margin-bottom: 50px
+	.row
+		justify-content: space-around
+		flex-wrap: wrap
+.service-item
+	display: inline-block
+	text-align: center
+	border: 1px solid #EEF5FF
+	border-radius: 5px
+	padding: 170px 100px 40px
+	margin-bottom: 25px
+	background: url('../img/Service1.png') no-repeat center 55px
+	background-color: rgba(238, 245, 255, 0)
+	&-bg	
+		background: url('../img/Service2.png') no-repeat center 55px
+	&-bg2	
+		background: url('../img/Service3.png') no-repeat center 55px
+	&-bg3	
+		background: url('../img/Service4.png') no-repeat center 55px
+	&-bg4	
+		background: url('../img/Service5.png') no-repeat center 55px
+	&-bg5	
+		background: url('../img/Service6.png') no-repeat center 55px
+	button
+		vertical-align: bottom
+		margin-top: 50px
+	h5
+		height: 36px;
+
+.service-item:hover
+	background-color: rgba(238, 245, 255, 1)
+	opacity: 1
+	text-decoration: underline
+	transition: background-color 0.5s
+
+// service end
+
+// about_company start
+
+.about_company
+	background: url('../img/bg_about_company.png') repeat center
+	background-size: cover
+	padding-top: 40px
+	padding-bottom: 40px
+.about_content
+	text-align: center
+	.logo
+		margin: 0 auto
+		background: url('../img/logo2.png') no-repeat center
+		width: 135px
+		height: 140px
+	h2
+		padding: 35px 0
+	p
+		font-size: emy(13)
+		line-height: 24px
+	p.blue
+		padding-bottom: 30px
+		font-size: emy(16)
+		font-family: $default-font-bold
+	p.whitney
+		padding-top: 30px
+		font-family: $whitney
+		font-size: emy(24)
+
+// about_company end
+
+// news start
+
+.news
+	background-color: #EEF5FF
+	padding: 55px 0 55px
+	h2
+		margin-bottom: 40px
+		text-align: center
+
+.news_item
+	max-width: 360px
+	min-width: 240px
+	height: auto
+	background-color: #fff
+	margin-bottom: 30px
+	img
+		margin-bottom: 30px
+	h4, p 
+		margin: 15px 10px 20px 20px
+	h4
+		height: 72px
+		color: $blue
+	h4:hover
+		color: #e51515
+		text-decoration: underline
+	p 
+		height: 72px
+	a 
+		display: block
+		font-family: $default-font-bold
+		color: #000
+		padding-bottom: 10px
+	a:hover
+		color: #e51515
+	h4, a 
+		margin: 0 0px 0 20px
+// news end
+
+// footer
+	
+// footer-content start
+
+.footer-content,
+.footer-map
+	h3 
+		position: relative
+		padding-top: 40px
+		padding-left: 40px 
+		text-transform: uppercase
+		color: $blue
+.footer-content
+	border-bottom: 2px solid #FAFAFA
+	position: relative
+	padding-bottom: 85px
+	.col
+		flex-wrap: wrap
+	h3
+		span
+			display: block
+			position: absolute
+			left: 0
+			width: 33px
+			height: 30px
+			background: url('../img/sprite_footer.png') no-repeat -92px 0
+		.bg_pos1
+			background-position: -62px 0
+		.bg_pos2
+			background-position: -34px 0
+		.bg_pos3
+			background-position: -2px 0
+	address, p, a
+		padding-top: 25px
+		font-size: emy(14)
+		line-height: 23px
+	a 
+		display: block
+		font-family: $default-font-bold
+		font-size: emy(16)
+		color: #e51515
+	.phone
+		font-family: $default-font-bold
+		border-bottom: 1px dotted #e51515
+	.btn-map
+		display: none
+		position: absolute
+		top: -5px
+		left: 480px
+		margin: 45px auto 0
+		width: 170px
+		height: 45px
+		font-family: $default-font-bold
+		color: #fff
+		font-size: emy(14)
+		text-decoration: underline dotted
+		text-align: center
+		background-color: $blue
+		border: none
+		border-radius: 3px
+	.active
+		display: block
+.footer-map
+	.stocks
+		display: flex
+		flex-wrap: wrap
+		padding-top: 30px
+		padding-bottom: 25px
+		h3, address
+			padding: 0
+			margin-right: 25px
+		h3
+			max-width: 150px
+			align-self: center
+		address
+			max-width: 410px
+			margin-right: 50px
+			padding-left: 65px
+			font-size: emy(12)
+			line-height: 18px
+			background: url('../img/stock.png') no-repeat 0 8px 
+		span
+			text-decoration: underline dotted
+			font-size: emy(14)
+.footer-copyright
+	padding: 25px 0 20px
+	.container
+		display: flex
+		.copyright-content
+			flex-basis: 75%
+			.copyright 
+				padding-bottom: 20px
+				font-size: emy(13)
+			p 
+				font-size: emy(11)
+				line-height: 16px
+
+		.copyright-logo
+			flex-basis: 25%
+			text-align: right
+			font-size: emy(13)	
+			img
+				line-height: 30px
+				vertical-align: bottom
+.maps
+	display: none
+.maps-active
+	display: block
+
+.popup-form
+	text-align: center
+	
+	p
+		font-size: emy(14)
+	input, textarea
+		display: block
+		width: 100%
+		padding: 10px
+		margin-bottom: 15px
+		border-radius: 3px
+		color: #000
+	input:focus, textarea:focus
+		box-shadow: inset 0 0 1px 1px $blue
+	textarea
+		margin-bottom: 35px
+	input:required:invalid,
+	textarea:required:invalid
+		box-shadow:inset 0 0 1px 1px red
+
+
+
+// new_page CATALOG1
+
+.view_product
+	text-align: center
+	padding: 40px 0
+	h1, p
+		margin-bottom: 40px
+	h1
+		margin-top: 40px
+
+.method_product
+	background: url('../img/bg-catalog2.jpg') no-repeat 0 0
+	background-size: cover
+	text-align: center
+	padding-top: 50px
+	h2
+		margin: 0 0 50px 0
+.method-items
+	display: flex
+	flex-wrap: wrap
+	.method-item
+		flex-basis: 100%
+		height: 200px
+		display: flex
+		margin-bottom: 30px
+		.method-img
+			background: #EEF5FF url("../img/catalog-img.png") no-repeat center center
+			width: 213px
+			img
+				width: 100%
+				height: 100%
+				border-bottom-left-radius: 5px
+				border-top-left-radius: 5px
+
+		.method-content
+			background: #fff
+			padding: 30px 60px 0px 30px
+			text-align: left
+			border-top-right-radius: 5px
+			border-bottom-right-radius: 5px
+			h3 
+				mt
+				text-transform: uppercase
+			p 
+				margin: 15px 0
+				font-size: emy(14)
+
+@import "media" // Всегда в конце
