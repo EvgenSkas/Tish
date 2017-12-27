@@ -99,8 +99,8 @@ img
 // header start
 
 .main-head
-	padding: 10px 0 20px 0
-	box-shadow: 0 -10px 5px -5px #ccc 
+	padding: 10px 0 0 0
+	box-shadow: 0 10px 5px -5px #f9f9f9
 
 
 .contacts
@@ -251,16 +251,18 @@ img
 		text-transform: uppercase
 		font-family: $default-font-bold
 		font-size: emy(14)
-		padding: 30px 0 30px
-
+		padding: 30px 0 90px
 		a
 			color: #000
 			display: block
-
+		a.active_nav
+			color: #e51515
 		.fa
 			width: 95%
 			text-align: center
 			vertical-align: top
+		.fa.active_nav
+			color: #e51515
 
 	>li:first-child
 		margin-left: 0;
@@ -295,10 +297,12 @@ li.aplication:hover ul.menu-items
 	position: absolute
 	top: 80px
 	left: 0
+	margin-top: 40px
 	padding: 35px 0 40px 50px
 	background-color: #fff
 	background-clip: padding-box
-	border-top: 40px solid transparent
+	box-shadow: inset 0 10px 5px -5px #f9f9f9
+	border: 2px solid #f9f9f9
 	opacity: 1
 	z-index: 100
 	
@@ -356,7 +360,7 @@ li.aplication:hover ul.menu-items
 	display: table
 	position: absolute
 	background: transparent
-	box-shadow: -0px 10px 5px -5px #f1f1f1
+	box-shadow: 0px 10px 5px -5px #f1f1f1
 	
 .advantage ul li.arrow:before
 	top: 12px
@@ -753,15 +757,21 @@ ul.multiple-items>button
 
 .popup-form
 	text-align: center
-	max-width: 520px
+	max-width: 500px
+	padding: 40px
 	p
+		display: block
+		width: 250px
 		font-size: emy(14)
+		margin: 0 auto 20px
+
 	input, textarea
 		display: block
 		width: 100%
 		padding: 10px
 		margin-bottom: 15px
 		border-radius: 3px
+		border: 2px solid #dedede
 		color: #000
 		font-size: emy(14)
 	input:focus, textarea:focus
@@ -841,6 +851,8 @@ ul.multiple-items>button
 		text-align: center
 		padding-top: 3px
 		font-size: emy(28)
+	.fa:hover
+		color: #e92525
 
 
 @import "media" // Всегда в конце

@@ -3164,9 +3164,9 @@ img {
   display: none; }
 
 .main-head {
-  padding: 10px 0 20px 0;
-  -webkit-box-shadow: 0 -10px 5px -5px #ccc;
-          box-shadow: 0 -10px 5px -5px #ccc; }
+  padding: 10px 0 0 0;
+  -webkit-box-shadow: 0 10px 5px -5px #f9f9f9;
+          box-shadow: 0 10px 5px -5px #f9f9f9; }
 
 .contacts {
   display: -webkit-box;
@@ -3341,14 +3341,18 @@ img {
     text-transform: uppercase;
     font-family: "MuseoSansCyrl_700", sans-serif;
     font-size: 0.875em;
-    padding: 30px 0 30px; }
+    padding: 30px 0 90px; }
     .sf-menu > li a {
       color: #000;
       display: block; }
+    .sf-menu > li a.active_nav {
+      color: #e51515; }
     .sf-menu > li .fa {
       width: 95%;
       text-align: center;
       vertical-align: top; }
+    .sf-menu > li .fa.active_nav {
+      color: #e51515; }
   .sf-menu > li:first-child {
     margin-left: 0; }
   .sf-menu > li:hover > a {
@@ -3394,10 +3398,13 @@ li.aplication:hover ul.menu-items {
   position: absolute;
   top: 80px;
   left: 0;
+  margin-top: 40px;
   padding: 35px 0 40px 50px;
   background-color: #fff;
   background-clip: padding-box;
-  border-top: 40px solid transparent;
+  -webkit-box-shadow: inset 0 10px 5px -5px #f9f9f9;
+          box-shadow: inset 0 10px 5px -5px #f9f9f9;
+  border: 2px solid #f9f9f9;
   opacity: 1;
   z-index: 100; }
   li.catalog:hover ul.menu-items li,
@@ -3461,8 +3468,8 @@ li.aplication:hover ul.menu-items {
   display: table;
   position: absolute;
   background: transparent;
-  -webkit-box-shadow: -0px 10px 5px -5px #f1f1f1;
-          box-shadow: -0px 10px 5px -5px #f1f1f1; }
+  -webkit-box-shadow: 0px 10px 5px -5px #f1f1f1;
+          box-shadow: 0px 10px 5px -5px #f1f1f1; }
 
 .advantage ul li.arrow:before {
   top: 12px;
@@ -3918,9 +3925,13 @@ ul.multiple-items > button {
 
 .popup-form {
   text-align: center;
-  max-width: 520px; }
+  max-width: 500px;
+  padding: 40px; }
   .popup-form p {
-    font-size: 0.875em; }
+    display: block;
+    width: 250px;
+    font-size: 0.875em;
+    margin: 0 auto 20px; }
   .popup-form input, .popup-form textarea {
     display: block;
     width: 100%;
@@ -3928,6 +3939,7 @@ ul.multiple-items > button {
     margin-bottom: 15px;
     -webkit-border-radius: 3px;
             border-radius: 3px;
+    border: 2px solid #dedede;
     color: #000;
     font-size: 0.875em; }
   .popup-form input:focus, .popup-form textarea:focus {
@@ -4019,6 +4031,8 @@ ul.multiple-items > button {
     text-align: center;
     padding-top: 3px;
     font-size: 1.75em; }
+  .scrollup .fa:hover {
+    color: #e92525; }
 
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
