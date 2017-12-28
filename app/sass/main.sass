@@ -23,9 +23,9 @@
 	opacity: 1
 
 
-input:required,
-textarea:required
-	box-shadow: none
+input:invalid,
+textarea:invalid
+	box-shadow:inset 0 0 1px 1px #fff
 
 
 
@@ -690,7 +690,10 @@ ul.multiple-items>button
 		font-family: $default-font-bold
 		font-size: emy(16)
 		color: #e51515
-	.phone
+	a.phone
+		text-decoration: none
+		display: inline
+		padding-top: 0
 		font-family: $default-font-bold
 		border-bottom: 1px dotted #e51515
 	.btn-map
@@ -759,6 +762,7 @@ ul.multiple-items>button
 	text-align: center
 	max-width: 500px
 	padding: 40px
+	font-size: emy(14)
 	p
 		display: block
 		width: 250px
@@ -778,14 +782,30 @@ ul.multiple-items>button
 		box-shadow: inset 0 0 1px 1px $blue
 	textarea
 		margin-bottom: 35px
-	input:required:invalid,
-	textarea:required:invalid
-		box-shadow:inset 0 0 1px 1px red
-.mfp-close
-	font-family: $default-font
-	font-size: emy(24)
+		font-family: $default-font
+		font-size: emy(14)
 .mfp-close:hover
 	color: #e92525
+.scrollup
+	width: 40px
+	height: 40px
+	border-radius: 50%
+	opacity: 0.9
+	position: fixed
+	bottom: 50px
+	right: 30px
+	display: none
+	background-color: #000
+	text-decoration: none
+
+	.fa 
+		display: block
+		color: #fff
+		text-align: center
+		padding-top: 3px
+		font-size: emy(28)
+	.fa:hover
+		color: #e92525
 
 // new_page CATALOG1
 
@@ -809,15 +829,18 @@ ul.multiple-items>button
 	flex-wrap: wrap
 	.method-item
 		flex-basis: 100%
-		height: 200px
 		display: flex
 		margin-bottom: 30px
 		.method-img
 			background: #EEF5FF url("../img/catalog-img.png") no-repeat center center
-			width: 213px
+			width: 270px
+			height: 225px
+			border-bottom-left-radius: 5px
+			border-top-left-radius: 5px
 			img
+				display: block
 				width: 100%
-				height: 100%
+				height: 226px
 				border-bottom-left-radius: 5px
 				border-top-left-radius: 5px
 
@@ -828,31 +851,41 @@ ul.multiple-items>button
 			border-top-right-radius: 5px
 			border-bottom-right-radius: 5px
 			h3 
-				mt
 				text-transform: uppercase
 			p 
 				margin: 15px 0
 				font-size: emy(14)
-.scrollup
-	width: 40px
-	height: 40px
-	border-radius: 50%
-	opacity: 0.9
-	position: fixed
-	bottom: 50px
-	right: 30px
-	display: none
-	background-color: #000
-	text-decoration: none
 
-	.fa 
-		display: block
-		color: #fff
+.form
+	background: #EEF5FF
+	padding: 50px 0
+	.form-feedback
+		max-width: 970px
+		margin: 0 auto
+		background: #fff
 		text-align: center
-		padding-top: 3px
-		font-size: emy(28)
-	.fa:hover
-		color: #e92525
-
-
+		padding: 50px 120px
+		h2
+			padding-bottom: 40px
+		.feedback_catalog
+			display: flex
+			justify-content: space-between
+			align-items: flex-start
+			flex-wrap: wrap
+			input,
+			textarea
+				font-size: emy(14)
+				padding: 10px 5px
+				border-radius: 3px
+				border: 2px solid #dedede
+				color: #000
+			input[name="phone"]
+				flex-basis: 65%
+			input[name="email"]
+				flex-basis: 32%
+			textarea
+				flex-basis: 100%
+				margin: 25px 0 40px
+			button
+				margin: auto
 @import "media" // Всегда в конце

@@ -3073,11 +3073,6 @@ img.mfp-img {
   color: #000;
   opacity: 1; }
 
-input:required,
-textarea:required {
-  -webkit-box-shadow: none;
-          box-shadow: none; }
-
 html, body {
   height: 100%; }
 
@@ -3840,7 +3835,10 @@ ul.multiple-items > button {
     font-family: "MuseoSansCyrl_700", sans-serif;
     font-size: 1em;
     color: #e51515; }
-  .footer-content .phone {
+  .footer-content a.phone {
+    text-decoration: none;
+    display: inline;
+    padding-top: 0;
     font-family: "MuseoSansCyrl_700", sans-serif;
     border-bottom: 1px dotted #e51515; }
   .footer-content .btn-map {
@@ -3926,7 +3924,8 @@ ul.multiple-items > button {
 .popup-form {
   text-align: center;
   max-width: 500px;
-  padding: 40px; }
+  padding: 40px;
+  font-size: 0.875em; }
   .popup-form p {
     display: block;
     width: 250px;
@@ -3946,14 +3945,33 @@ ul.multiple-items > button {
     -webkit-box-shadow: inset 0 0 1px 1px #184fa6;
             box-shadow: inset 0 0 1px 1px #184fa6; }
   .popup-form textarea {
-    margin-bottom: 35px; }
-
-.mfp-close {
-  font-family: "MuseoSansCyrl_100", sans-serif;
-  font-size: 1.5em; }
+    margin-bottom: 35px;
+    font-family: "MuseoSansCyrl_100", sans-serif;
+    font-size: 0.875em; }
 
 .mfp-close:hover {
   color: #e92525; }
+
+.scrollup {
+  width: 40px;
+  height: 40px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  opacity: 0.9;
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+  display: none;
+  background-color: #000;
+  text-decoration: none; }
+  .scrollup .fa {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding-top: 3px;
+    font-size: 1.75em; }
+  .scrollup .fa:hover {
+    color: #e92525; }
 
 .view_product {
   text-align: center;
@@ -3983,7 +4001,6 @@ ul.multiple-items > button {
     -webkit-flex-basis: 100%;
         -ms-flex-preferred-size: 100%;
             flex-basis: 100%;
-    height: 200px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -3991,10 +4008,16 @@ ul.multiple-items > button {
     margin-bottom: 30px; }
     .method-items .method-item .method-img {
       background: #EEF5FF url("../img/catalog-img.png") no-repeat center center;
-      width: 213px; }
+      width: 270px;
+      height: 225px;
+      -webkit-border-bottom-left-radius: 5px;
+              border-bottom-left-radius: 5px;
+      -webkit-border-top-left-radius: 5px;
+              border-top-left-radius: 5px; }
       .method-items .method-item .method-img img {
+        display: block;
         width: 100%;
-        height: 100%;
+        height: 226px;
         -webkit-border-bottom-left-radius: 5px;
                 border-bottom-left-radius: 5px;
         -webkit-border-top-left-radius: 5px;
@@ -4013,26 +4036,56 @@ ul.multiple-items > button {
         margin: 15px 0;
         font-size: 0.875em; }
 
-.scrollup {
-  width: 40px;
-  height: 40px;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
-  opacity: 0.9;
-  position: fixed;
-  bottom: 50px;
-  right: 30px;
-  display: none;
-  background-color: #000;
-  text-decoration: none; }
-  .scrollup .fa {
-    display: block;
-    color: #fff;
+.form {
+  background: #EEF5FF;
+  padding: 50px 0; }
+  .form .form-feedback {
+    max-width: 970px;
+    margin: 0 auto;
+    background: #fff;
     text-align: center;
-    padding-top: 3px;
-    font-size: 1.75em; }
-  .scrollup .fa:hover {
-    color: #e92525; }
+    padding: 50px 120px; }
+    .form .form-feedback h2 {
+      padding-bottom: 40px; }
+    .form .form-feedback .feedback_catalog {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: start;
+      -webkit-align-items: flex-start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap; }
+      .form .form-feedback .feedback_catalog input,
+      .form .form-feedback .feedback_catalog textarea {
+        font-size: 0.875em;
+        padding: 10px 5px;
+        -webkit-border-radius: 3px;
+                border-radius: 3px;
+        border: 2px solid #dedede;
+        color: #000; }
+      .form .form-feedback .feedback_catalog input[name="phone"] {
+        -webkit-flex-basis: 65%;
+            -ms-flex-preferred-size: 65%;
+                flex-basis: 65%; }
+      .form .form-feedback .feedback_catalog input[name="email"] {
+        -webkit-flex-basis: 32%;
+            -ms-flex-preferred-size: 32%;
+                flex-basis: 32%; }
+      .form .form-feedback .feedback_catalog textarea {
+        -webkit-flex-basis: 100%;
+            -ms-flex-preferred-size: 100%;
+                flex-basis: 100%;
+        margin: 25px 0 40px; }
+      .form .form-feedback .feedback_catalog button {
+        margin: auto; }
 
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
@@ -4085,15 +4138,32 @@ ul.multiple-items > button {
   .method-img {
     display: none; }
   .method-items .method-item .method-content {
-    text-align: center; }
+    text-align: center;
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+    padding: 30px 30px 0 30px; }
+    .method-items .method-item .method-content button {
+      margin-bottom: 30px; }
   /**/ }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
+  .form .form-feedback .feedback_catalog input[name="phone"] {
+    -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%; }
+  .form .form-feedback .feedback_catalog input[name="email"] {
+    -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%; } }
+
+@media only screen and (max-width: 576px) {
   /**/ }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
+  .form .form-feedback {
+    padding: 50px 5px; }
   /**/ }
 
 /* Custom, iPhone Retina */

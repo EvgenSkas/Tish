@@ -63,6 +63,19 @@ $(".callback").submit(function() {
     });
     return false;
   });
+$(".callback2").submit(function() {
+    $.ajax({
+      type: "GET",
+      url: "mail.php",
+      data: $("#callback2").serialize()
+    }).done(function() {
+      alert("Спасибо за заявку!");
+      setTimeout(function() {
+        $.fancybox.close();
+      }, 1000);
+    });
+    return false;
+  });
 });
 
 
