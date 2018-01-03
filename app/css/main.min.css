@@ -4087,6 +4087,104 @@ ul.multiple-items > button {
       .form .form-feedback .feedback_catalog button {
         margin: auto; }
 
+.view_method {
+  background: #EEF5FF;
+  padding: 50px 0;
+  text-align: center; }
+  .view_method p {
+    padding: 45px 0; }
+  .view_method .method_table {
+    padding: 0 70px 70px 70px;
+    background: #fff;
+    overflow: auto; }
+  .view_method h3 {
+    text-transform: uppercase;
+    font-family: "MuseoSansCyrl_700", sans-serif;
+    padding: 55px 0 50px; }
+  .view_method table {
+    border-collapse: collapse;
+    font-size: 0.875em; }
+    .view_method table tr:first-child {
+      color: #0e3780;
+      font-family: "MuseoSansCyrl_700", sans-serif; }
+    .view_method table tr:nth-child(3) {
+      background: #f9fbff; }
+    .view_method table th, .view_method table td {
+      border: 1px solid #eef5ff; }
+    .view_method table th {
+      padding: 30px 0 25px; }
+    .view_method table th:nth-child(5n+1) {
+      padding: 0 30px; }
+    .view_method table td:nth-child(5n+1) {
+      text-transform: uppercase;
+      font-family: "MuseoSansCyrl_700", sans-serif; }
+    .view_method table td:last-child {
+      text-align: left;
+      padding: 20px 15px; }
+
+.way {
+  display: block;
+  text-align: center;
+  margin-bottom: 40px; }
+
+.service-page {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.875em;
+  max-width: 800px; }
+  .service-page .service-icons {
+    font-size: 0;
+    width: 235px;
+    height: 150px;
+    margin: 0 auto;
+    background: url("../img/uslugi/icons-uslugi-catalog-1.png") no-repeat -648px -62px; }
+  .service-page h1 {
+    padding-top: 35px; }
+  .service-page p {
+    padding-top: 35px; }
+  .service-page .btn {
+    text-transform: uppercase;
+    margin: 50px 0; }
+
+.news h1 {
+  text-align: center;
+  padding-bottom: 60px; }
+
+.news .numbers {
+  margin: 0 auto; }
+
+.news .numbers li {
+  display: inline-block;
+  margin-top: 25px;
+  margin-right: 25px; }
+  .news .numbers li a {
+    text-decoration: none;
+    font-family: "MuseoSansCyrl_700", sans-serif;
+    color: #000; }
+  .news .numbers li a.active {
+    color: #e51515; }
+  .news .numbers li a:hover {
+    color: #e51515; }
+
+.application .way {
+  padding-top: 40px; }
+
+.application h1, .application h2 {
+  text-align: center; }
+
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
@@ -4144,6 +4242,9 @@ ul.multiple-items > button {
     padding: 30px 30px 0 30px; }
     .method-items .method-item .method-content button {
       margin-bottom: 30px; }
+  .view_method .method_table {
+    padding: 0;
+    font-size: 0.75em; }
   /**/ }
 
 /* Small Devices, Tablets */
