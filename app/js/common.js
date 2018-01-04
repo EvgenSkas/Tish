@@ -85,6 +85,17 @@ $(".btn-map").click(function(e) {
   $(".maps").toggleClass('maps-active');
 });
 
+$(".ad1").click(function(e) {
+   e.preventDefault();
+  $(".ad1").addClass('active');
+  $(".ad2").removeClass('active');
+});
+$(".ad2").click(function(e) {
+   e.preventDefault();
+  $(".ad2").addClass('active');
+  $(".ad1").removeClass('active');
+});
+
 $(".mobile-mnu").click(function(e) {
   e.preventDefault();
   $(".sf-menu").toggleClass('hidden');

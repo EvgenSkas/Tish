@@ -3666,7 +3666,7 @@ ul.multiple-items > button {
     color: #e51515; }
 
 .service {
-  padding: 65px 0 60px; }
+  padding: 0 0 60px; }
   .service h2 {
     text-align: center;
     margin-bottom: 50px; }
@@ -3756,7 +3756,7 @@ ul.multiple-items > button {
 
 .news {
   background-color: #EEF5FF;
-  padding: 55px 0 55px; }
+  padding: 0 0 55px; }
   .news h2 {
     margin-bottom: 40px;
     text-align: center; }
@@ -3869,8 +3869,7 @@ ul.multiple-items > button {
   padding-top: 30px;
   padding-bottom: 25px; }
   .footer-map .stocks h3, .footer-map .stocks address {
-    padding: 0;
-    margin-right: 25px; }
+    padding: 0; }
   .footer-map .stocks h3 {
     max-width: 150px;
     -webkit-align-self: center;
@@ -3880,13 +3879,19 @@ ul.multiple-items > button {
   .footer-map .stocks address {
     max-width: 410px;
     margin-right: 50px;
-    padding-left: 65px;
+    padding: 35px 35px 35px 100px;
     font-size: 0.75em;
     line-height: 18px;
-    background: url("../img/stock.png") no-repeat 0 8px; }
+    background: url("../img/stock.png") no-repeat 35px 43px;
+    border: 1px solid transparent;
+    cursor: pointer; }
+  .footer-map .stocks address:hover {
+    border: 1px solid #e51515; }
   .footer-map .stocks span {
     text-decoration: underline dotted;
     font-size: 0.875em; }
+  .footer-map .stocks .active {
+    border: 1px solid #e51515; }
 
 .footer-copyright {
   padding: 25px 0 20px; }
@@ -4125,7 +4130,7 @@ ul.multiple-items > button {
 .way {
   display: block;
   text-align: center;
-  margin-bottom: 40px; }
+  margin: 40px 0; }
 
 .service-page {
   display: -webkit-box;
@@ -4179,11 +4184,69 @@ ul.multiple-items > button {
   .news .numbers li a:hover {
     color: #e51515; }
 
-.application .way {
-  padding-top: 40px; }
+.application .application-content {
+  max-width: 820px;
+  margin: 0 auto; }
 
 .application h1, .application h2 {
   text-align: center; }
+
+.application h2 {
+  margin-top: 35px;
+  text-transform: none; }
+
+.application p {
+  margin-top: 35px;
+  font-size: 0.875em; }
+
+.application p:last-child {
+  margin-bottom: 40px; }
+
+.application ul {
+  margin-top: 40px; }
+  .application ul a {
+    color: #242b38;
+    font-family: "MuseoSansCyrl_700", sans-serif; }
+  .application ul a.active {
+    color: #e51515; }
+  .application ul a:hover {
+    color: #e51515; }
+
+.application p.question {
+  color: #174ca3;
+  font-family: "MuseoSansCyrl_700", sans-serif; }
+
+.contacts-page {
+  text-align: center; }
+  .contacts-page .row:nth-child(2) {
+    border-bottom: 1px solid #eef5ff;
+    padding-bottom: 35px; }
+  .contacts-page span {
+    display: block;
+    margin: 35px 0; }
+  .contacts-page h5, .contacts-page li {
+    font-size: 0.875em; }
+  .contacts-page h5 {
+    text-transform: none; }
+  .contacts-page li {
+    margin-top: 5px; }
+  .contacts-page .contact-info {
+    max-width: 770px;
+    margin: 0 auto;
+    font-size: 0.875em; }
+  .contacts-page p, .contacts-page ul {
+    margin-bottom: 35px; }
+
+.route {
+  text-align: center; }
+
+.footer-map .stocks {
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around; }
+
+.footer-map .stocks address:hover {
+  border: 1px solid #e51515; }
 
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */

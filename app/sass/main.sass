@@ -537,7 +537,7 @@ ul.multiple-items>button
 // service
 
 .service
-	padding: 65px 0 60px
+	padding: 0 0 60px
 	h2
 		text-align: center
 		margin-bottom: 50px
@@ -614,7 +614,7 @@ ul.multiple-items>button
 
 .news
 	background-color: #EEF5FF
-	padding: 55px 0 55px
+	padding: 0 0 55px
 	h2
 		margin-bottom: 40px
 		text-align: center
@@ -719,20 +719,25 @@ ul.multiple-items>button
 		padding-bottom: 25px
 		h3, address
 			padding: 0
-			margin-right: 25px
 		h3
 			max-width: 150px
 			align-self: center
 		address
 			max-width: 410px
 			margin-right: 50px
-			padding-left: 65px
+			padding: 35px 35px 35px 100px
 			font-size: emy(12)
 			line-height: 18px
-			background: url('../img/stock.png') no-repeat 0 8px 
+			background: url('../img/stock.png') no-repeat 35px 43px 
+			border: 1px solid transparent
+			cursor: pointer
+		address:hover
+			border: 1px solid #e51515
 		span
 			text-decoration: underline dotted
 			font-size: emy(14)
+		.active
+			border: 1px solid #e51515
 .footer-copyright
 	padding: 25px 0 20px
 	.container
@@ -931,7 +936,7 @@ ul.multiple-items>button
 .way
 	display: block
 	text-align: center
-	margin-bottom: 40px
+	margin: 40px 0
 
 // PAGE 4 Service1
 .service-page
@@ -980,9 +985,63 @@ ul.multiple-items>button
 // Page6 Application
 
 .application
-	.way
-		padding-top: 40px
+	.application-content
+		max-width: 820px
+		margin: 0 auto
 	h1, h2
 		text-align: center
+	h2
+		margin-top: 35px
+		text-transform: none
+	p 
+		margin-top: 35px
+		font-size: emy(14)
+	p:last-child
+		margin-bottom: 40px
+	ul
+		margin-top: 40px
+		a 
+			color: #242b38
+			font-family: $default-font-bold
+		a.active
+			color: #e51515
+		a:hover
+			color: #e51515
+	p.question
+		color: #174ca3
+		font-family: $default-font-bold
+
+// Page7 Contacts
+
+.contacts-page
+	text-align: center
+	.row:nth-child(2)
+		border-bottom: 1px solid #eef5ff
+		padding-bottom: 35px
+	span
+		display: block
+		margin: 35px 0
+	h5, li
+		font-size: emy(14)
+	h5
+		text-transform: none
+	li 
+		margin-top: 5px
+	.contact-info
+		max-width: 770px
+		margin: 0 auto
+		font-size: emy(14)
+	p, ul
+		margin-bottom: 35px
+
+// Page8 Route
 	
+.route
+	text-align: center
+.footer-map .stocks
+	justify-content: space-around
+.footer-map .stocks address
+	padding: 
+.footer-map .stocks address:hover
+	border: 1px solid #e51515
 @import "media" // Всегда в конце
